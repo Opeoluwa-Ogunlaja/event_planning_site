@@ -22,3 +22,8 @@
 
 - Family: [Proxima soft](https://fontshub.pro/font/proxima-soft-download)
 - Weights: 400, 500, 700
+
+
+## Icons
+
+- [Feather Icons](https://feathericons.com)
