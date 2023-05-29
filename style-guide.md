@@ -5,13 +5,13 @@
 ### Primary
 
 - Primary Gradient: #00BCD4 to #00B39E
+- Primary-Shadow: #00B39E
 - CTA Color: #00BCD4
 - Yellow-bg: #ffd200
 
 ### Neutral
 
 - Text: #212121
-- Shadow: #00B39E
 
 ### Background
 
