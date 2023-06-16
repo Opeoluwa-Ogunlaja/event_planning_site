@@ -17,6 +17,9 @@
 
 - White: #fff
 - Light background: #c2eff5
+- Light background gradient: #c2eff5 to #409eff
+- Yellow backround gradient
+- gray bg: #f6f5f3
 
 ## Fonts
 

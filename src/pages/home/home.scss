@@ -1,0 +1,21 @@
+@import '../../mixins';
+
+.section-container__hero{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'description illustration';
+
+    @include small{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'illustration'
+            'description'
+        ;
+    }
+
+    & > :nth-child(1){
+        grid-area: description;
+    }
+    & > :nth-child(2){
+        grid-area: illustration;
+    }
+}

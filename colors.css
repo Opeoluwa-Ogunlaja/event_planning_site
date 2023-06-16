@@ -1,0 +1,20 @@
+:root{
+	--primary-gradient-1: rgb(0, 188, 212);
+	--primary-gradient-1: rgb(0, 179, 158);
+	--cta-color: rgb(0, 188, 212);
+	--yellow: rgb(255, 210, 0);
+	--primary-shadow: rgb(0, 179, 158);
+
+	--text-color: rgb(33, 33, 33);
+
+	--white: rgb(255, 255, 255);
+	--light-bg: rgb(194, 239, 245);
+	--light-bg-grad-1: rgb(194, 239, 245);
+	--light-bg-grad-1: rgb(64, 158, 255);
+
+	--yellow-bg-grad-1: rgb(255, 255, 255);
+	--yellow-bg-grad-2: rgb(255, 244, 233);
+	--yellow-bg-grad-3: rgb(255, 233, 217);
+	--yellow-bg-grad-4: rgb(255, 228, 196);
+	--yellow-bg-grad-5: rgb(255, 210, 0);
+}
