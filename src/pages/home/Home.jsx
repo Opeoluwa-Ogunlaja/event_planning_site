@@ -9,7 +9,7 @@ import "./home.scss";
 const Home = () => {
   return (
     <div className="">
-      {/* <HeroSection /> */}
+      <HeroSection />
       <AboutUsBriefElem />
       <ServicesBriefElem />
     </div>

@@ -33,7 +33,7 @@ const HeroSectionElem = () => {
         </div>
         <div className="section-container section-container__hero my-auto grid h-fit min-h-[250px] pt-24 sm:pt-0">
           <div className="mb-5 flex flex-col items-center gap-3 py-2 text-center sm:mb-0 sm:items-start sm:gap-6 sm:py-8 sm:text-start">
-            <h2 className="text-5xl font-bold uppercase leading-tight tracking-widest text-highlight-blue">
+            <h2 className="text-4xl sm:text-5xl font-bold uppercase leading-tight tracking-widest text-highlight-blue">
               Make events <br /> <span className="text-white">memorable</span>
             </h2>
             <p className="max-w-[30ch] font-medium leading-normal text-dark sm:max-w-[40ch]">
