@@ -19,19 +19,19 @@ const HeroSectionElem = () => {
       <div className="stack grid max-h-fit min-h-[587px]">
         <div className="container w-[375px]">
           <div className="after-mask relative -z-10 h-full w-full overflow-hidden after:bg-light-blue after:opacity-95 after:mix-blend-normal sm:after:mix-blend-lighten">
-            {/* <img
+            <img
               src={bgBlueImg}
               alt="background-party event image"
               className="pointer-events-none absolute left-0 top-0 h-full w-full"
-            /> */}
+            />
           </div>
-          {/* <img
+          <img
             src={HexSVG}
             alt="background-Hexagon pattern"
             className="pointer-events-none absolute left-0 top-0 -z-10 h-full w-full opacity-30 sm:w-7/12"
-          /> */}
+          />
         </div>
-        <div className="section-container section-container__hero my-autogrid h-fit min-h-[250px] pt-24 sm:pt-0">
+        <div className="section-container section-container__hero my-auto grid h-fit min-h-[250px] pt-24 sm:pt-0">
           <div className="mb-5 flex flex-col items-center gap-3 py-2 text-center sm:mb-0 sm:items-start sm:gap-6 sm:py-8 sm:text-start">
             <h2 className="text-5xl font-bold uppercase leading-tight tracking-widest text-highlight-blue">
               Make events <br /> <span className="text-white">memorable</span>
@@ -78,10 +78,8 @@ const AboutUsBrief = () => {
       variants={fadeIn("right", "", 0.1, 0.75)}
       className="section-container section-container__about mt-20 w-full text-center sm:mt-32 "
     >
-      {/* <div className="section-container section-container__about mt-20 w-full text-center sm:mt-28 "> */}
       <h3 className="font-medium text-light">What we are about</h3>
       <h2 className="text-3xl font-bold text-highlight-blue">About Us</h2>
-      {/* </div> */}
       <div className="mx-auto flex w-fit flex-1 flex-col items-center sm:flex-row sm:gap-6">
         <img
           src={logo}
@@ -110,7 +108,6 @@ const ServicesBrief = () => {
       variants={fadeIn("right", "", 0.1, 0.75)}
       className="section-container section-container__services mt-20 w-full text-center sm:mt-32 "
     >
-      {/* <div className="section-container section-container__about mt-20 w-full text-center sm:mt-28 "> */}
       <h3 className="font-medium text-light">What we do</h3>
       <h2 className="text-3xl font-bold text-highlight-blue">Our Services</h2>
       <p className="mx-auto mt-4 max-w-[35ch] tracking-wide text-light">
@@ -120,7 +117,6 @@ const ServicesBrief = () => {
           Birthday Events, Wedding Events and more...
         </span>
       </p>
-      {/* </div> */}
 
       <div className="services-grid mt-12 flex w-full flex-wrap justify-center gap-8">
         {servicesTrimArr.map((service, i) => {
