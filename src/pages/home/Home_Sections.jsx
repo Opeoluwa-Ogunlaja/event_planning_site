@@ -214,7 +214,7 @@ const Testimonials = () => {
         autoPlay={true}
         interval={2000}
         centerMode={true}
-        centerSlidePercentage={smallScreen ? 100 : 33}
+        centerSlidePercentage={smallScreen ? 100 : 50}
         showThumbs={false}
         infiniteLoop={true}
         showArrows={false}
@@ -222,12 +222,12 @@ const Testimonials = () => {
         renderIndicator={Dot}
         showStatus={false}
 
-        className="testimonials-grid mt-12 p-6 grid w-full sm:w-4/5 grid-flow-col mx-auto place-content-center gap-8 overflow-hidden"
+        className="testimonials-grid mt-12 w-full sm:w-4/5 mx-auto"
       >
         {servicesTrimArr.map((service, i) => {
           return (
             <ServiceCardNoTilt
-              className={"min-h-full w-full sm:w-1/3 max-w-[12rem]"}
+              className={"min-h-full w-[25vw] min-w-[15rem] max-w-[20rem]"}
               key={`${service.title}${i}`}
               {...service}
             />
