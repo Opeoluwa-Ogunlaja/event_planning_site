@@ -17,21 +17,21 @@ const HeroSectionElem = () => {
   return (
     <header className="hero-section relative">
       <div className="stack grid max-h-fit min-h-[587px]">
-        <div className="container">
+        <div className="container w-[375px]">
           <div className="after-mask relative -z-10 h-full w-full overflow-hidden after:bg-light-blue after:opacity-95 after:mix-blend-normal sm:after:mix-blend-lighten">
-            <img
+            {/* <img
               src={bgBlueImg}
               alt="background-party event image"
               className="pointer-events-none absolute left-0 top-0 h-full w-full"
-            />
+            /> */}
           </div>
-          <img
+          {/* <img
             src={HexSVG}
             alt="background-Hexagon pattern"
             className="pointer-events-none absolute left-0 top-0 -z-10 h-full w-full opacity-30 sm:w-7/12"
-          />
+          /> */}
         </div>
-        <div className="section-container section-container__hero my-auto grid h-fit min-h-[250px] pt-24 sm:pt-0">
+        <div className="section-container section-container__hero my-autogrid h-fit min-h-[250px] pt-24 sm:pt-0">
           <div className="mb-5 flex flex-col items-center gap-3 py-2 text-center sm:mb-0 sm:items-start sm:gap-6 sm:py-8 sm:text-start">
             <h2 className="text-5xl font-bold uppercase leading-tight tracking-widest text-highlight-blue">
               Make events <br /> <span className="text-white">memorable</span>

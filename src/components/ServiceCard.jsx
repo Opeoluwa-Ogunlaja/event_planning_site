@@ -4,7 +4,7 @@ const ServiceCard = ({ title, img, className }) => {
   return (
     <div
       className={twMerge(
-        "flex cursor-pointer flex-col justify-between gap-6 rounded-lg border-[3px] border-primary px-6 py-4 transition-transform hover:scale-105",
+        "flex cursor-pointer flex-col justify-between gap-6 mx-auto sm:mx-0 rounded-lg border-[3px] border-primary px-6 py-4 transition-transform hover:scale-105",
         className
       )}
     >
