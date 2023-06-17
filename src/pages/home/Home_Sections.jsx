@@ -86,7 +86,7 @@ const AboutUsBrief = () => {
           alt="site_logo"
           className="aspect-square w-52 shadow-primary drop-shadow-lg"
         />
-        <p className="max-w-[50ch] tracking-widest text-light sm:text-start sm:tracking-wider">
+        <p className="max-w-[50ch] tracking-wide text-light sm:text-start">
           <strong className="text-dark">Supris</strong> is a full-service event
           planning agency that specializes in creating unforgettable
           experiences. We have a team of experienced professionals who can help
@@ -130,9 +130,9 @@ const ServicesBrief = () => {
         })}
       </div>
 
-      <div className="mt-14 flex flex-col gap-5 justify-center">
-        <SeeMore to={'services'}/>
-        <BookBtn className={'mx-auto px-20'}/>
+      <div className="mt-14 flex flex-col justify-center gap-5">
+        <SeeMore to={"services"} />
+        <BookBtn className={"mx-auto px-20"} />
       </div>
     </motion.div>
   );
