@@ -17,7 +17,7 @@ const HeroSectionElem = () => {
   return (
     <header className="hero-section relative">
       <div className="stack grid max-h-fit min-h-[587px]">
-        <div className="container w-[375px]">
+        <div className="container">
           <div className="after-mask relative -z-10 h-full w-full overflow-hidden after:bg-light-blue after:opacity-95 after:mix-blend-normal sm:after:mix-blend-lighten">
             <img
               src={bgBlueImg}
