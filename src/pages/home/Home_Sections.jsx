@@ -216,11 +216,6 @@ const Testimonials = () => {
           );
         })}
       </Carousel>
-
-      <div className="mt-14 flex flex-col justify-center gap-5">
-        <SeeMore to={"gallery"} />
-        <BookBtn className={"mx-auto px-20"} />
-      </div>
     </motion.div>
   );
 };
