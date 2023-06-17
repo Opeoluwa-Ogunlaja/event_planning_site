@@ -1,5 +1,6 @@
 import SectionWrapper from "../../hoc/SectionWraper";
-// import { Carousel } from 'react-responsive-carousel'
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import bgBlueImg from "../../assets/bg-blue.jpg";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../../utils/motion";
@@ -12,6 +13,7 @@ import logo from "../../assets/logo.svg";
 import { servicesArr } from "../../data";
 import { trimArr } from "../../utils";
 import SeeMore from "../../components/SeeMore";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 const HeroSectionElem = () => {
   return (
@@ -104,22 +106,17 @@ const servicesTrimArr = trimArr(servicesArr, 6);
 
 const ServicesBrief = () => {
   return (
-    <div
-      className="section-container section-container__services mt-20 w-full text-center sm:mt-32 "
-    >
-      <motion.div
-      variants={textVariant()}
-      
-    >
-      <h3 className="font-medium text-light">What we do</h3>
-      <h2 className="text-3xl font-bold text-highlight-blue">Our Services</h2>
-      <p className="mx-auto mt-4 max-w-[35ch] tracking-wide text-light">
-        Our company can generally adapt to any kind of event but here are some
-        services that we specialize in, including{" "}
-        <span className="text-dark">
-          Birthday Events, Wedding Events and more...
-        </span>
-      </p>
+    <div className="section-container section-container__services mt-20 w-full text-center sm:mt-32 ">
+      <motion.div variants={textVariant()}>
+        <h3 className="font-medium text-light">What we do</h3>
+        <h2 className="text-3xl font-bold text-highlight-blue">Our Services</h2>
+        <p className="mx-auto mt-4 max-w-[35ch] tracking-wide text-light">
+          Our company can generally adapt to any kind of event but here are some
+          services that we specialize in, including{" "}
+          <span className="text-dark">
+            Birthday Events, Wedding Events and more...
+          </span>
+        </p>
       </motion.div>
 
       <div className="services-grid mt-12 flex w-full flex-wrap justify-center gap-8">
@@ -179,7 +176,13 @@ const GalleryBrief = () => {
 
 export const GalleryBriefElem = SectionWrapper(GalleryBrief, "gallery");
 
+const Dot = ({ clickHandler, isSelected, index, label }) => {
+  return <div className={`rounded-full w-2 aspect-square border-primary ${isSelected ? 'bg-light-blue' : 'bg-white'}`}></div>
+}
+
 const Testimonials = () => {
+  const smallScreen = useMediaQuery('(max-width: 640px)')
+
   return (
     <motion.div
       variants={fadeIn("right", "", 0.1, 0.75)}
@@ -191,17 +194,28 @@ const Testimonials = () => {
         Here are some comments about our company from our satisfied clients!
       </p>
 
-      <div className="services-grid mt-12 flex w-full flex-wrap justify-center gap-8">
+      <Carousel
+        autoPlay={true}
+        interval={2000}
+        centerMode={true}
+        centerSlidePercentage={smallScreen ? 80 : 33}
+        showThumbs={false}
+        infiniteLoop={true}
+        dynamicHeight={false}
+        renderIndicator={Dot}
+        showStatus={false}
+        className="testimonials-grid mt-12 w-4/5 grid grid-flow-col-dense place-content-center mx-auto overflow-hidden"
+      >
         {servicesTrimArr.map((service, i) => {
           return (
             <ServiceCard
-              className={"min-h-[13rem] w-1/3 min-w-[280px] max-w-[12rem]"}
+              className={"min-h-full w-1/3 min-w-[280px] max-w-[12rem]"}
               key={`${service.title}${i}`}
               {...service}
             />
           );
         })}
-      </div>
+      </Carousel>
 
       <div className="mt-14 flex flex-col justify-center gap-5">
         <SeeMore to={"gallery"} />
