@@ -14,6 +14,7 @@ import { servicesArr } from "../../data";
 import { trimArr } from "../../utils";
 import SeeMore from "../../components/SeeMore";
 import useMediaQuery from "../../hooks/useMediaQuery";
+import { twMerge } from "tailwind-merge";
 
 const HeroSectionElem = () => {
   return (
@@ -187,14 +188,21 @@ const Dot = (clickHandler, isSelected, index, label) => {
   );
 };
 
-const PrevBtn = (clickHandler, canGoPrev) => {
-  return (
-    <button
-      onClick={() => clickHandler()}
-      className={`mx-1 aspect-square w-10 rounded-full border-2 border-greyish-yellow transition-all left-0 absolute`}
-    >Omo</button>
-  );
-};
+const CtrlBtn = (clickHandler, className, elem) => (
+  <button
+    onClick={clickHandler}
+    className={twMerge(
+      `absolute top-1/2 z-10 mx-2 hidden aspect-square w-16 place-items-center rounded-full border-2 border-greyish-yellow bg-primary text-white transition-all sm:grid`,
+      className
+    )}
+  >
+    {elem}
+  </button>
+);
+
+const PrevBtn = (clickHandler) => CtrlBtn(clickHandler, "left-0", "omo");
+
+const NextBtn = (clickHandler) => CtrlBtn(clickHandler, "right-0", "omo");
 
 const Testimonials = () => {
   const smallScreen = useMediaQuery("(max-width: 640px)");
@@ -217,12 +225,12 @@ const Testimonials = () => {
         centerSlidePercentage={smallScreen ? 100 : 50}
         showThumbs={false}
         infiniteLoop={true}
-        showArrows={false}
+        renderArrowPrev={PrevBtn}
+        renderArrowNext={NextBtn}
         dynamicHeight={false}
         renderIndicator={Dot}
         showStatus={false}
-
-        className="testimonials-grid mt-12 w-full sm:w-4/5 mx-auto"
+        className="testimonials-grid static mx-auto mt-12 w-full sm:w-4/5"
       >
         {servicesTrimArr.map((service, i) => {
           return (

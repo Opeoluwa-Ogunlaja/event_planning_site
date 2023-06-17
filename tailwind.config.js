@@ -10,6 +10,7 @@ export default {
       backgroundColor: {
         'light-blue': 'hsla(187, 70%, 86%, 100%)',
         'greyish-yellow': 'hsla(40, 14%, 96%, 100%)',
+        'primary': 'rgb(64, 158, 255)'
       },
       boxShadowColor: {
         'primary': 'hsla(187, 100%, 41%, 50%)'
