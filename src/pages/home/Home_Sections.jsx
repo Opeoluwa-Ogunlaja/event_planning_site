@@ -33,7 +33,7 @@ const HeroSectionElem = () => {
         </div>
         <div className="section-container section-container__hero my-auto grid h-fit min-h-[250px] pt-24 sm:pt-0">
           <div className="mb-5 flex flex-col items-center gap-3 py-2 text-center sm:mb-0 sm:items-start sm:gap-6 sm:py-8 sm:text-start">
-            <h2 className="text-4xl sm:text-5xl font-bold uppercase leading-tight tracking-widest text-highlight-blue">
+            <h2 className="text-4xl font-bold uppercase leading-tight tracking-widest text-highlight-blue sm:text-5xl">
               Make events <br /> <span className="text-white">memorable</span>
             </h2>
             <p className="max-w-[30ch] font-medium leading-normal text-dark sm:max-w-[40ch]">
@@ -139,3 +139,87 @@ const ServicesBrief = () => {
 };
 
 export const ServicesBriefElem = SectionWrapper(ServicesBrief, "services");
+
+const GalleryBrief = () => {
+  return (
+    <motion.div
+      variants={fadeIn("right", "", 0.1, 0.75)}
+      className="section-container section-container__services mt-20 w-full text-center sm:mt-32 "
+    >
+      <h3 className="font-medium text-light">Our works</h3>
+      <h2 className="text-3xl font-bold text-highlight-blue">Gallery</h2>
+      <p className="mx-auto mt-4 max-w-[35ch] tracking-wide text-light">
+        Here are some pictures of events we planned. Nice, aren’t they!
+      </p>
+
+      <div className="services-grid mt-12 flex w-full flex-wrap justify-center gap-8">
+        {servicesTrimArr.map((service, i) => {
+          return (
+            <ServiceCard
+              className={"min-h-[13rem] w-1/3 min-w-[280px] max-w-[12rem]"}
+              key={`${service.title}${i}`}
+              {...service}
+            />
+          );
+        })}
+      </div>
+
+      <div className="mt-14 flex flex-col justify-center gap-5">
+        <SeeMore to={"gallery"} />
+        <BookBtn className={"mx-auto px-20"} />
+      </div>
+    </motion.div>
+  );
+};
+
+export const GalleryBriefElem = SectionWrapper(GalleryBrief, "gallery");
+
+const Testimonials = () => {
+  return (
+    <motion.div
+      variants={fadeIn("right", "", 0.1, 0.75)}
+      className="section-container section-container__services mt-20 w-full text-center sm:mt-32 "
+    >
+      <h3 className="font-medium text-light">What they say about us</h3>
+      <h2 className="text-3xl font-bold text-highlight-blue">Testimonials</h2>
+      <p className="mx-auto mt-4 max-w-[35ch] tracking-wide text-light">
+        Here are some comments about our company from our satisfied clients!
+      </p>
+
+      <div className="services-grid mt-12 flex w-full flex-wrap justify-center gap-8">
+        {servicesTrimArr.map((service, i) => {
+          return (
+            <ServiceCard
+              className={"min-h-[13rem] w-1/3 min-w-[280px] max-w-[12rem]"}
+              key={`${service.title}${i}`}
+              {...service}
+            />
+          );
+        })}
+      </div>
+
+      <div className="mt-14 flex flex-col justify-center gap-5">
+        <SeeMore to={"gallery"} />
+        <BookBtn className={"mx-auto px-20"} />
+      </div>
+    </motion.div>
+  );
+};
+
+export const TestimonialsElem = SectionWrapper(Testimonials, "testimonials");
+
+const Book = () => {
+  return (
+    <div className="section-container section-container__services mt-20 w-full bg-light-blue py-8 text-center sm:mt-32">
+      <motion.div
+        variants={textVariant()}
+        className="flex flex-col justify-center gap-2"
+      >
+        <h3 className="text-2xl font-medium text-normal">Book now</h3>
+        <BookBtn className={"mx-auto px-20"} />
+      </motion.div>
+    </div>
+  );
+};
+
+export const BookElem = SectionWrapper(Book, "book");
