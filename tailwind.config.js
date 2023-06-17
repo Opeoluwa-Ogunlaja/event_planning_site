@@ -16,6 +16,7 @@ export default {
       },
       borderColor: {
         'primary': 'rgb(64, 158, 255)',
+        'greyish-yellow': 'hsla(40, 14%, 96%, 100%)',
       },
       textColor: {
         dark: 'hsla(0, 0%, 13%, 60%)',

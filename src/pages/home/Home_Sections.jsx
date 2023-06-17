@@ -8,7 +8,7 @@ import PartySVG from "../../assets/Party_Monochromatic.svg";
 import HexSVG from "../../assets/Hexagon.svg";
 // import { useNavigate } from "react-router-dom";
 import BookBtn from "../../components/BookBtn";
-import ServiceCard from "../../components/ServiceCard";
+import ServiceCard, { ServiceCardNoTilt } from "../../components/ServiceCard";
 import logo from "../../assets/logo.svg";
 import { servicesArr } from "../../data";
 import { trimArr } from "../../utils";
@@ -176,12 +176,28 @@ const GalleryBrief = () => {
 
 export const GalleryBriefElem = SectionWrapper(GalleryBrief, "gallery");
 
-const Dot = ({ clickHandler, isSelected, index, label }) => {
-  return <div className={`rounded-full w-2 aspect-square border-primary ${isSelected ? 'bg-light-blue' : 'bg-white'}`}></div>
-}
+const Dot = (clickHandler, isSelected, index, label) => {
+  return (
+    <button
+      onClick={clickHandler}
+      className={`mx-1 aspect-square w-4 rounded-full border-2 border-greyish-yellow transition-all ${
+        isSelected ? "scale-110 bg-light-blue" : "bg-white"
+      }`}
+    ></button>
+  );
+};
+
+const PrevBtn = (clickHandler, canGoPrev) => {
+  return (
+    <button
+      onClick={() => clickHandler()}
+      className={`mx-1 aspect-square w-10 rounded-full border-2 border-greyish-yellow transition-all left-0 absolute`}
+    >Omo</button>
+  );
+};
 
 const Testimonials = () => {
-  const smallScreen = useMediaQuery('(max-width: 640px)')
+  const smallScreen = useMediaQuery("(max-width: 640px)");
 
   return (
     <motion.div
@@ -198,18 +214,20 @@ const Testimonials = () => {
         autoPlay={true}
         interval={2000}
         centerMode={true}
-        centerSlidePercentage={smallScreen ? 80 : 33}
+        centerSlidePercentage={smallScreen ? 100 : 33}
         showThumbs={false}
         infiniteLoop={true}
+        showArrows={false}
         dynamicHeight={false}
         renderIndicator={Dot}
         showStatus={false}
-        className="testimonials-grid mt-12 w-4/5 grid grid-flow-col-dense place-content-center mx-auto overflow-hidden"
+
+        className="testimonials-grid mt-12 p-6 grid w-full sm:w-4/5 grid-flow-col mx-auto place-content-center gap-8 overflow-hidden"
       >
         {servicesTrimArr.map((service, i) => {
           return (
-            <ServiceCard
-              className={"min-h-full w-1/3 min-w-[280px] max-w-[12rem]"}
+            <ServiceCardNoTilt
+              className={"min-h-full w-full sm:w-1/3 max-w-[12rem]"}
               key={`${service.title}${i}`}
               {...service}
             />
