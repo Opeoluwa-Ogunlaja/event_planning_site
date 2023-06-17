@@ -104,9 +104,12 @@ const servicesTrimArr = trimArr(servicesArr, 6);
 
 const ServicesBrief = () => {
   return (
-    <motion.div
-      variants={fadeIn("right", "", 0.1, 0.75)}
+    <div
       className="section-container section-container__services mt-20 w-full text-center sm:mt-32 "
+    >
+      <motion.div
+      variants={textVariant()}
+      
     >
       <h3 className="font-medium text-light">What we do</h3>
       <h2 className="text-3xl font-bold text-highlight-blue">Our Services</h2>
@@ -117,13 +120,15 @@ const ServicesBrief = () => {
           Birthday Events, Wedding Events and more...
         </span>
       </p>
+      </motion.div>
 
       <div className="services-grid mt-12 flex w-full flex-wrap justify-center gap-8">
         {servicesTrimArr.map((service, i) => {
           return (
             <ServiceCard
-              className={"min-h-[13rem] w-1/3 min-w-[280px] max-w-[12rem]"}
+              className={"w-1/3 min-w-[280px] max-w-[12rem]"}
               key={`${service.title}${i}`}
+              index={i}
               {...service}
             />
           );
@@ -134,7 +139,7 @@ const ServicesBrief = () => {
         <SeeMore to={"services"} />
         <BookBtn className={"mx-auto px-20"} />
       </div>
-    </motion.div>
+    </div>
   );
 };
 

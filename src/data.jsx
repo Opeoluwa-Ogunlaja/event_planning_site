@@ -26,3 +26,26 @@ export const servicesArr = [
     img: delivery_truck,
   },
 ];
+
+const imgData = [
+  {
+    img: "",
+    title: "",
+  },
+  {
+    img: "",
+    title: "",
+  },
+  {
+    img: "",
+    title: "",
+  },
+  {
+    img: "",
+    title: "",
+  },
+  {
+    img: "",
+    title: "",
+  },
+];
