@@ -19,3 +19,35 @@
         grid-area: illustration;
     }
 }
+
+.gallery-grid{
+    & > :nth-child(1){
+        grid-area: one;
+    }
+    & > :nth-child(2){
+        grid-area: two;
+    }
+    & > :nth-child(3){
+        grid-area: three;
+    }
+    & > :nth-child(4){
+        grid-area: four;
+    }
+
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 300px;
+
+    grid-template-areas: 
+        'one one one one'
+        'two two three three'
+        'two two four four'
+    ;
+
+    & > div{
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

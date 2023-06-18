@@ -6,7 +6,7 @@ const SeeMore = ({ to, className }) => (
     to={to}
     className={twMerge(
       className,
-      "text-xl tracking-widest text-highlight-blue underline underline-offset-4"
+      "text-base tracking-widest text-highlight-blue underline underline-offset-4"
     )}
   >
     See more {">>"}

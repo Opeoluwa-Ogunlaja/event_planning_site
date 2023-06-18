@@ -10,7 +10,7 @@ import HexSVG from "../../assets/Hexagon.svg";
 import BookBtn from "../../components/BookBtn";
 import ServiceCard, { ServiceCardNoTilt } from "../../components/ServiceCard";
 import logo from "../../assets/logo.svg";
-import { servicesArr } from "../../data";
+import { imgData, servicesArr } from "../../data";
 import { trimArr } from "../../utils";
 import SeeMore from "../../components/SeeMore";
 import useMediaQuery from "../../hooks/useMediaQuery";
@@ -155,16 +155,10 @@ const GalleryBrief = () => {
         Here are some pictures of events we planned. Nice, aren’t they!
       </p>
 
-      <div className="services-grid mt-12 flex w-full flex-wrap justify-center gap-8">
-        {servicesTrimArr.map((service, i) => {
-          return (
-            <ServiceCard
-              className={"min-h-[13rem] w-1/3 min-w-[280px] max-w-[12rem]"}
-              key={`${service.title}${i}`}
-              {...service}
-            />
-          );
-        })}
+      <div className="gallery-grid mt-12 w-full grid justify-center gap-3">
+        {imgData.map((img, i) => <div key={img.title+i}>
+          <img src={img.img} alt={img.title} />
+        </div>)}
       </div>
 
       <div className="mt-14 flex flex-col justify-center gap-5">
@@ -176,6 +170,7 @@ const GalleryBrief = () => {
 };
 
 export const GalleryBriefElem = SectionWrapper(GalleryBrief, "gallery");
+
 
 const Dot = (clickHandler, isSelected, index, label) => {
   return (
