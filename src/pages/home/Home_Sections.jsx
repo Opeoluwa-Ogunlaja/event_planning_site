@@ -34,7 +34,7 @@ const HeroSectionElem = () => {
             className="pointer-events-none absolute left-0 top-0 -z-10 h-full w-full opacity-30 sm:w-7/12"
           />
         </div>
-        <div className="section-container section-container__hero my-auto grid h-fit min-h-[250px] pt-24 sm:pt-0">
+        <div className="section-container section-container__hero my-auto grid h-fit min-h-[250px] pt-24">
           <div className="mb-5 flex flex-col items-center gap-3 py-2 text-center sm:mb-0 sm:items-start sm:gap-6 sm:py-8 sm:text-start">
             <h2 className="text-4xl font-bold uppercase leading-tight tracking-widest text-highlight-blue sm:text-5xl">
               Make events <br /> <span className="text-white">memorable</span>
@@ -155,10 +155,12 @@ const GalleryBrief = () => {
         Here are some pictures of events we planned. Nice, aren’t they!
       </p>
 
-      <div className="gallery-grid mt-12 w-full grid justify-center gap-3">
-        {imgData.map((img, i) => <div key={img.title+i}>
-          <img src={img.img} alt={img.title} />
-        </div>)}
+      <div className="gallery-grid mt-12 grid w-full justify-center gap-3">
+        {imgData.map((img, i) => (
+          <div key={img.title + i}>
+            <img src={img.img} alt={img.title} className="object-cover" />
+          </div>
+        ))}
       </div>
 
       <div className="mt-14 flex flex-col justify-center gap-5">
@@ -170,7 +172,6 @@ const GalleryBrief = () => {
 };
 
 export const GalleryBriefElem = SectionWrapper(GalleryBrief, "gallery");
-
 
 const Dot = (clickHandler, isSelected, index, label) => {
   return (
@@ -187,7 +188,7 @@ const CtrlBtn = (clickHandler, className, elem) => (
   <button
     onClick={clickHandler}
     className={twMerge(
-      `absolute top-1/2 z-10 mx-2 hidden aspect-square w-16 place-items-center rounded-full border-2 border-greyish-yellow bg-primary text-white transition-all sm:grid`,
+      `absolute top-1/2 z-10 mx-2 hidden aspect-square w-16 -translate-y-1/2 place-items-center rounded-full bg-primary text-white shadow-lg transition-all sm:grid`,
       className
     )}
   >

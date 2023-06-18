@@ -1,4 +1,4 @@
-// import Navbar from '../../components/Navbar';
+import Navbar from "../../components/Navbar";
 import {
   AboutUsBriefElem,
   BookElem,
@@ -11,14 +11,15 @@ import "./home.scss";
 
 const Home = () => {
   return (
-    <div className="">
+    <>
+      <Navbar />
       <HeroSection />
       <AboutUsBriefElem />
       <ServicesBriefElem />
       <GalleryBriefElem />
       <TestimonialsElem />
-      <BookElem/>
-    </div>
+      <BookElem />
+    </>
   );
 };
 
