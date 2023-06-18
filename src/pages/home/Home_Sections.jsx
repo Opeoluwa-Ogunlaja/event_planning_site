@@ -8,13 +8,15 @@ import PartySVG from "../../assets/Party_Monochromatic.svg";
 import HexSVG from "../../assets/Hexagon.svg";
 // import { useNavigate } from "react-router-dom";
 import BookBtn from "../../components/BookBtn";
-import ServiceCard, { ServiceCardNoTilt } from "../../components/ServiceCard";
+import ServiceCard from "../../components/ServiceCard";
 import logo from "../../assets/logo.svg";
 import { imgData, servicesArr } from "../../data";
 import { trimArr } from "../../utils";
 import SeeMore from "../../components/SeeMore";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import { twMerge } from "tailwind-merge";
+
+import { TestimonialCard } from "../../components/TestimonialCard";
 
 const HeroSectionElem = () => {
   return (
@@ -230,7 +232,7 @@ const Testimonials = () => {
       >
         {servicesTrimArr.map((service, i) => {
           return (
-            <ServiceCardNoTilt
+            <TestimonialCard
               className={"min-h-full w-[25vw] min-w-[15rem] max-w-[20rem]"}
               key={`${service.title}${i}`}
               {...service}
