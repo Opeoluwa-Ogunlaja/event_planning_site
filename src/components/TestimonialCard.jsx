@@ -1,18 +1,31 @@
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
-import { fadeIn } from '../utils/motion'
+import { fadeIn } from "../utils/motion";
 
-
-export const TestimonialCard = ({ title, img, className, index = 1 }) => {
+export const TestimonialCard = ({
+  name,
+  img,
+  className,
+  review,
+  index = 1,
+}) => {
   return (
     <motion.div
-        variants={fadeIn('right', '', 0.5 * index, 0.75)}
-        className={twMerge(
-        "flex cursor-pointer min-h-full bg-white flex-col justify-between gap-6 mx-auto sm:mx-0 rounded-lg border-[3px] border-primary px-6 py-4 transition-transform hover:scale-105",
+      variants={fadeIn("right", "", 0.5 * index, 0.75)}
+      className={twMerge(
+        "mx-auto flex h-full min-h-[300px] cursor-pointer flex-col items-center gap-2 rounded-lg bg-[rgb(255,244,233)] py-4 text-center shadow-xl transition-transform hover:scale-105 sm:mx-0",
         className
-        )}>
-        <img src={img} alt={title + " img"} className="min-h-[70%]" />
-        <h3 className="text-xl text-highlight-yellow drop-shadow-sm">{title}</h3>
+      )}
+    >
+      <div className="mx-auto aspect-square w-20 rounded-full border-2 border-primary shadow-inner sm:w-28 sm:border-[8px]">
+        <img
+          src={img}
+          alt={name + " img"}
+          className="aspect-square w-full rounded-full shadow-inner"
+        />
+      </div>
+      <h3 className="text-xl text-highlight-blue font-bold drop-shadow-sm">{name}</h3>
+      <p className="mx-auto mt-4 max-w-[25ch] text-dark opacity-95">{review}</p>
     </motion.div>
   );
 };

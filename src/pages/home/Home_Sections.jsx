@@ -10,7 +10,7 @@ import HexSVG from "../../assets/Hexagon.svg";
 import BookBtn from "../../components/BookBtn";
 import ServiceCard from "../../components/ServiceCard";
 import logo from "../../assets/logo.svg";
-import { imgData, servicesArr } from "../../data";
+import { imgData, servicesArr, testimonialsData } from "../../data";
 import { trimArr } from "../../utils";
 import SeeMore from "../../components/SeeMore";
 import useMediaQuery from "../../hooks/useMediaQuery";
@@ -208,7 +208,7 @@ const Testimonials = () => {
   return (
     <motion.div
       variants={fadeIn("right", "", 0.1, 0.75)}
-      className="section-container section-container__services mt-20 w-full text-center sm:mt-32 "
+      className="section-container section-container__services mt-20 w-full text-center sm:mt-32"
     >
       <h3 className="font-medium text-light">What they say about us</h3>
       <h2 className="text-3xl font-bold text-highlight-blue">Testimonials</h2>
@@ -230,10 +230,10 @@ const Testimonials = () => {
         showStatus={false}
         className="testimonials-grid static mx-auto mt-12 w-full sm:w-4/5"
       >
-        {servicesTrimArr.map((service, i) => {
+        {testimonialsData.map((service, i) => {
           return (
             <TestimonialCard
-              className={"min-h-full w-[25vw] min-w-[15rem] max-w-[20rem]"}
+              className={"w-[25vw] min-w-[15rem] max-w-[20rem]"}
               key={`${service.title}${i}`}
               {...service}
             />
