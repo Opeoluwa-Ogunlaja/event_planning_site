@@ -6,6 +6,7 @@ import "./navbar.scss";
 import { useToggle } from "../hooks/useToggle";
 import useClickOutside from "../hooks/useClickOutside";
 import { twMerge } from "tailwind-merge";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 const nav_links = [
   {
@@ -35,12 +36,15 @@ const navHoverClass = (
 };
 
 const NavbarDropdown = () => {
+  const bigScreen = useMediaQuery('(min-width: 640px)')
   const id = useId();
   const [open, toggle, setOpen] = useToggle();
   const dropdownRef = useRef();
   useClickOutside(dropdownRef, (e) => {
     setOpen(false);
   });
+
+  if (bigScreen && open) setOpen(false)
 
   return (
     <div className="navbar-dropdown" id={id} ref={dropdownRef}>

@@ -3,3 +3,7 @@ export const trimArr = (arr = [], length) => {
 
     return arr.slice(0, length)
 }
+
+export const asyncWait = (interval) => new Promise(resolve => {
+    setTimeout(resolve, interval)
+})
