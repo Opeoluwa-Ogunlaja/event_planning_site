@@ -17,6 +17,11 @@ import useMediaQuery from "../../hooks/useMediaQuery";
 import { twMerge } from "tailwind-merge";
 
 import { TestimonialCard } from "../../components/TestimonialCard";
+import {
+  arrow_left as ArrowLeft,
+  arrow_right as ArrowRight,
+} from "../../assets/icons/regular";
+import Footer from "../../components/Footer";
 
 const HeroSectionElem = () => {
   return (
@@ -190,7 +195,7 @@ const CtrlBtn = (clickHandler, className, elem) => (
   <button
     onClick={clickHandler}
     className={twMerge(
-      `absolute top-1/2 z-10 mx-2 hidden aspect-square w-16 -translate-y-1/2 place-items-center rounded-full bg-primary text-white shadow-lg transition-all sm:grid`,
+      `absolute top-1/2 z-10 mx-2 hidden aspect-square w-12 hover:scale-125 -translate-y-1/2 place-content-center rounded-full bg-primary text-white shadow-lg transition-all sm:grid`,
       className
     )}
   >
@@ -198,9 +203,16 @@ const CtrlBtn = (clickHandler, className, elem) => (
   </button>
 );
 
-const PrevBtn = (clickHandler) => CtrlBtn(clickHandler, "left-0", "omo");
+const CtrlIcon = (direction) => {
+  let className = "aspect-square w-6";
+  return direction == "left" ? <ArrowLeft className={className}/> : <ArrowRight className={className}/>
+};
 
-const NextBtn = (clickHandler) => CtrlBtn(clickHandler, "right-0", "omo");
+const PrevBtn = (clickHandler) =>
+  CtrlBtn(clickHandler, "left-0", CtrlIcon("left"));
+
+const NextBtn = (clickHandler) =>
+  CtrlBtn(clickHandler, "right-0", CtrlIcon("right"));
 
 const Testimonials = () => {
   const smallScreen = useMediaQuery("(max-width: 640px)");
@@ -261,3 +273,5 @@ const Book = () => {
 };
 
 export const BookElem = SectionWrapper(Book, "book");
+
+export const FooterElem = SectionWrapper(Footer, 'footer')

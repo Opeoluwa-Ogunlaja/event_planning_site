@@ -1,3 +1,4 @@
+import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import FullDummyLoader from "../../hoc/FullDummyLoader";
 import {
@@ -20,6 +21,7 @@ const Home = () => {
       <GalleryBriefElem />
       <TestimonialsElem />
       <BookElem />
+      <Footer />
     </FullDummyLoader>
   );
 };

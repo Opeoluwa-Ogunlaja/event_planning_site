@@ -55,26 +55,26 @@ export const testimonialsData = [
   {
     img: testimonial_1,
     name: "Opeoluwa",
-    review: "Nice! somappdokasodkapsodpaosd apsodkapsodk aspldkpaoskd"
+    review: "Lorem ipsum dolor sit amet consectetur adipisicing elit"
   },
   {
     img: testimonial_2,
     name: "Adeola",
-    review: "Awesome!"
+    review: "Lorem ipsum dolor sit amet consectetur adipisicing elit"
   },
   {
     img: testimonial_3,
     name: "Anuoluwapo",
-    review: "Joy!!"
+    review: "Lorem ipsum dolor sit amet consectetur adipisicing elit"
   },
   {
     img: testimonial_3,
     name: "Anuoluwapo",
-    review: "Joy!!"
+    review: "Lorem ipsum dolor sit amet consectetur adipisicing elit"
   },
   {
     img: testimonial_3,
     name: "Anuoluwapo",
-    review: "Joy!!"
+    review: "Lorem ipsum dolor sit amet consectetur adipisicing elit"
   },
 ];
