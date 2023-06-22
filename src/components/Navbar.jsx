@@ -7,21 +7,7 @@ import { useToggle } from "../hooks/useToggle";
 import useClickOutside from "../hooks/useClickOutside";
 import { twMerge } from "tailwind-merge";
 import useMediaQuery from "../hooks/useMediaQuery";
-
-const nav_links = [
-  {
-    to: "",
-    label: "Home",
-  },
-  {
-    to: "/services",
-    label: "Services",
-  },
-  {
-    to: "/contact-us",
-    label: "Contact us",
-  },
-];
+import { nav_links } from "../data";
 
 const navHoverClass = (
   isActive,

@@ -1,0 +1,11 @@
+.footer-icon{
+    *{
+        transition: all .3s ease;
+    }
+
+    &:hover{
+        *{
+            fill: rgb(255, 210, 0);
+        }
+    }
+}

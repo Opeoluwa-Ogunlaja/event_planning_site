@@ -11,6 +11,7 @@ export default {
         'light-blue': 'hsla(187, 70%, 86%, 100%)',
         'greyish-yellow': 'hsla(40, 14%, 96%, 100%)',
         'primary': 'rgb(64, 158, 255)',
+        'primary-yellow': 'rgb(255, 210, 0)',
         dark: 'hsla(0, 0%, 13%, 60%)',
         'footer': 'hsl(191.25,41.38%,45.49%)'
       },

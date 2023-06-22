@@ -8,6 +8,21 @@ import testimonial_1 from "./assets/testimonial_1.jpg";
 import testimonial_2 from "./assets/testimonial_2.jpg";
 import testimonial_3 from "./assets/testimonial_3.jpg";
 
+export const nav_links = [
+  {
+    to: "",
+    label: "Home",
+  },
+  {
+    to: "/services",
+    label: "Services",
+  },
+  {
+    to: "/contact-us",
+    label: "Contact us",
+  },
+];
+
 export const servicesArr = [
   {
     title: "Event planning",
