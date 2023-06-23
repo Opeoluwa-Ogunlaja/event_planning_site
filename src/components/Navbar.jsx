@@ -93,7 +93,7 @@ const Navbar = () => {
         </a>
       </div>
       <div className="navbar-right ml-auto">
-        <ul className="hidden items-center gap-4 text-lg sm:flex">
+        <ul className="hidden items-center gap-6 text-base sm:flex">
           {nav_links.map((item, i) => (
             <li key={item.label + i}>
               <NavLink

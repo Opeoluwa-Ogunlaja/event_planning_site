@@ -1,30 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
-import { Icon_facebook, Icon_instagram, Icon_pinterest, Icon_twitter } from "../assets/icons/regular";
 import logo from "../assets/logo.svg";
 import './footer.scss'
-import { nav_links } from "../data";
+import { nav_links, socials } from "../data";
 import { twMerge } from "tailwind-merge";
-
-const socials = [{
-    name: 'facebook',
-    icon: Icon_facebook,
-    to: ''
-},
-{
-    name: 'instagram',
-    icon: Icon_instagram,
-    to: ''
-},
-{
-    name: 'pinterest',
-    icon: Icon_pinterest,
-    to: ''
-},
-{
-    name: 'twitter',
-    icon: Icon_twitter,
-    to: ''
-}]
 
 const footerNavHoverClass = (
     isActive,

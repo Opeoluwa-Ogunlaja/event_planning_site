@@ -86,7 +86,7 @@ const AboutUsBrief = () => {
   return (
     <motion.div
       variants={fadeIn("right", "", 0.1, 0.75)}
-      className="section-container section-container__about mt-20 w-full text-center sm:mt-32 "
+      className="section-container section-container__about mt-28 w-full text-center sm:mt-32 "
     >
       <h3 className="font-medium text-light">What we are about</h3>
       <h2 className="text-3xl font-bold text-highlight-blue">About Us</h2>
@@ -114,7 +114,7 @@ const servicesTrimArr = trimArr(servicesArr, 6);
 
 const ServicesBrief = () => {
   return (
-    <div className="section-container section-container__services mt-20 w-full text-center sm:mt-32 ">
+    <div className="section-container section-container__services mt-28 w-full text-center sm:mt-32 ">
       <motion.div variants={textVariant()}>
         <h3 className="font-medium text-light">What we do</h3>
         <h2 className="text-3xl font-bold text-highlight-blue">Our Services</h2>
@@ -154,7 +154,7 @@ const GalleryBrief = () => {
   return (
     <motion.div
       variants={fadeIn("right", "", 0.1, 0.75)}
-      className="section-container section-container__services mt-20 w-full text-center sm:mt-32 "
+      className="section-container section-container__services mt-28 w-full text-center sm:mt-32 "
     >
       <h3 className="font-medium text-light">Our works</h3>
       <h2 className="text-3xl font-bold text-highlight-blue">Gallery</h2>
@@ -220,7 +220,7 @@ const Testimonials = () => {
   return (
     <motion.div
       variants={fadeIn("right", "", 0.1, 0.75)}
-      className="section-container section-container__services mt-20 w-full text-center sm:mt-32"
+      className="section-container section-container__services mt-28 w-full text-center sm:mt-32"
     >
       <h3 className="font-medium text-light">What they say about us</h3>
       <h2 className="text-3xl font-bold text-highlight-blue">Testimonials</h2>
@@ -260,12 +260,12 @@ export const TestimonialsElem = SectionWrapper(Testimonials, "testimonials");
 
 const Book = () => {
   return (
-    <div className="section-container section-container__services mt-20 w-full bg-light-blue py-8 text-center sm:mt-32">
+    <div className="section-container section-container__services mt-28 w-full bg-light-blue py-8 text-center sm:mt-36">
       <motion.div
         variants={textVariant()}
         className="flex flex-col justify-center gap-2"
       >
-        <h3 className="text-2xl font-medium text-normal">Book now</h3>
+        <h3 className="text-2xl font-bold text-normal">Book now</h3>
         <BookBtn className={"mx-auto px-20"} />
       </motion.div>
     </div>

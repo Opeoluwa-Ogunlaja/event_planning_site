@@ -17,7 +17,7 @@ export const TestimonialCard = ({
         className
       )}
     >
-      <div className="mx-auto aspect-square w-20 rounded-full border-2 border-primary shadow-inner sm:w-28 sm:border-[8px]">
+      <div className="mx-auto aspect-square w-20 rounded-full border-2 border-primary shadow-inner sm:w-28 sm:border-[6px]">
         <img
           src={img}
           alt={name + " img"}

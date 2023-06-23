@@ -7,21 +7,47 @@ import galleryImage from "./assets/christmas-dinner.png";
 import testimonial_1 from "./assets/testimonial_1.jpg";
 import testimonial_2 from "./assets/testimonial_2.jpg";
 import testimonial_3 from "./assets/testimonial_3.jpg";
+import { Icon_facebook, Icon_instagram, Icon_pinterest, Icon_twitter } from "./assets/icons/regular";
 
 export const nav_links = [
   {
-    to: "",
+    to: "/event_planning_site/",
     label: "Home",
   },
   {
-    to: "/services",
+    to: "/event_planning_site/services",
     label: "Services",
   },
   {
-    to: "/contact-us",
+    to: "/event_planning_site/gallery",
+    label: "Gallery",
+  },
+  {
+    to: "/event_planning_site/contact-us",
     label: "Contact us",
   },
 ];
+
+export const socials = [{
+  name: 'facebook',
+  icon: Icon_facebook,
+  to: ''
+},
+{
+  name: 'instagram',
+  icon: Icon_instagram,
+  to: ''
+},
+{
+  name: 'pinterest',
+  icon: Icon_pinterest,
+  to: ''
+},
+{
+  name: 'twitter',
+  icon: Icon_twitter,
+  to: ''
+}]
 
 export const servicesArr = [
   {
