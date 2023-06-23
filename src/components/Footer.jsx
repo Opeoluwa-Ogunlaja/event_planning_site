@@ -16,8 +16,8 @@ const footerNavHoverClass = (
     }`;
 };
 
-const Footer = () => {
-    return <footer className="py-5 bg-footer section-container flex items-center sm:flex-row flex-col">
+const Footer = ({ className }) => {
+    return <footer className={twMerge("py-5 bg-footer section-container flex items-center sm:flex-row flex-col", className)}>
         <div className="w-16 sm:w-12 aspect-square">
             <img src={logo} alt="logo" className="w-full aspect-square object-cover"/>
         </div>

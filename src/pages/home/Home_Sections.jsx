@@ -22,6 +22,7 @@ import {
   arrow_right as ArrowRight,
 } from "../../assets/icons/regular";
 import Footer from "../../components/Footer";
+import ServiceCardGrid from "../../components/ServiceCardGrid";
 
 const HeroSectionElem = () => {
   return (
@@ -127,18 +128,7 @@ const ServicesBrief = () => {
         </p>
       </motion.div>
 
-      <div className="services-grid mt-12 flex w-full flex-wrap justify-center gap-8">
-        {servicesTrimArr.map((service, i) => {
-          return (
-            <ServiceCard
-              className={"w-1/3 min-w-[280px] max-w-[12rem]"}
-              key={`${service.title}${i}`}
-              index={i}
-              {...service}
-            />
-          );
-        })}
-      </div>
+      <ServiceCardGrid servicesArray={servicesTrimArr}/>
 
       <div className="mt-14 flex flex-col justify-center gap-5">
         <SeeMore to={"services"} />
