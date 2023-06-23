@@ -162,7 +162,7 @@ const GalleryBrief = () => {
         Here are some pictures of events we planned. Nice, aren’t they!
       </p>
 
-      <div className="gallery-grid mt-12 grid w-full justify-center gap-3">
+      <div className="gallery-grid mt-12 grid w-full bg-light-blue p-3 justify-center gap-3">
         {imgData.map((img, i) => (
           <div key={img.title + i}>
             <img src={img.img} alt={img.title} className="object-cover" />

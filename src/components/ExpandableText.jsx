@@ -9,7 +9,7 @@ const ExpandableText = ({ children, minCharacters, className }) => {
 
   const minified = () => (
     <>
-      {children.substring(0, minCharacters)}{" "}
+      {children.substring(0, minCharacters)}{" "}.
       <span className="text-highlight-blue">Read more...</span>
     </>
   );
@@ -23,7 +23,7 @@ const ExpandableText = ({ children, minCharacters, className }) => {
         <>
           {children}{" "}
           <span className="text-highlight-blue">
-            {" "}
+            {" "}.
             ...Read less
           </span>
         </>

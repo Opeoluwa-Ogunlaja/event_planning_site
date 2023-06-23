@@ -4,12 +4,15 @@ import SectionWrapper from "../../hoc/SectionWraper";
 import { textVariant } from "../../utils/motion";
 import { useSearchParams } from "react-router-dom";
 import ExpandableText from "../../components/ExpandableText";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 const ServiceHeaderSearch = () => {
-    useSearchParams()
+
 }
 
 const ServicesHeaderElem = () => {
+  const smallScreen = useMediaQuery('(max-width:640px)')
+
   return (
     <header>
       <div className="stack grid h-fit min-h-[350px]">
@@ -22,7 +25,7 @@ const ServicesHeaderElem = () => {
             /> */}
           </div>
         </div>
-        <div className="mx-auto mt-16 sm:mt-24 flex w-full sm:w-2/3 flex-col items-center text-center py-16 section-container">
+        <div className="mx-auto mt-16 flex w-full sm:w-2/3 flex-col items-center text-center py-10 sm:py-16 section-container">
           <motion.div
             variants={textVariant()}
             className="mt-4 flex flex-col justify-center gap-2"
@@ -30,7 +33,7 @@ const ServicesHeaderElem = () => {
             <h2 className="text-3xl font-bold text-highlight-blue">
               Our Services
             </h2>
-            <ExpandableText minCharacters={194} className="mx-auto mt-4 max-w-[50ch] tracking-wide text-dark">
+            <ExpandableText minCharacters={smallScreen ? 194 : 300} className="mx-auto mt-4 max-w-[50ch] tracking-wide text-dark">
               Our company offers various types of services in various
               categories. Here are the services we offer. Feel free to grace
               through them to find one adequate for your event purpose. You can
@@ -40,7 +43,8 @@ const ServicesHeaderElem = () => {
           </motion.div>
         </div>
       </div>
-      
+
+      <ServiceHeaderSearch/>
     </header>
   );
 };
