@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import bgHeaderImg from "../../assets/makeup_kit.jpg";
+// import bgHeaderImg from "../../assets/makeup_kit.jpg";
 import SectionWrapper from "../../hoc/SectionWraper";
 import { fadeIn, textVariant } from "../../utils/motion";
 import ExpandableText from "../../components/ExpandableText";
@@ -61,7 +61,7 @@ const ServicesHeaderElem = () => {
               categories. Here are the services we offer. Feel free to grace
               through them to find one adequate for your event purpose. You can
               also use the search below to search for specific services to
-              reduce the time you'd spend seeking.
+              reduce the time you&apos;d spend seeking.
             </ExpandableText>
           </motion.div>
         </div>
@@ -75,7 +75,7 @@ const ServicesHeaderElem = () => {
 export const ServicesHeader = SectionWrapper(ServicesHeaderElem, "header");
 
 const NoServiceError = () => {
-  return <>Sorry, We don't offer thise service yet. Please, Make sure to check back later.</>
+  return <>Sorry, We don&apos;t offer this service yet. Please, Make sure to check back later.</>
 }
 
 const ServicesBodyElem = () => {
@@ -83,7 +83,7 @@ const ServicesBodyElem = () => {
   const deferredSearchValue = useDeferredValue(searchValue) 
 
   const filteredServices = servicesArr.filter(item => {
-    return item.title.toLowerCase().indexOf(deferredSearchValue) > -1
+    return item.title.toLowerCase().indexOf(deferredSearchValue.toLowerCase()) > -1
   })
 
   return (

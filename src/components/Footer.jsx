@@ -34,7 +34,7 @@ const Footer = ({ className }) => {
                             "text-white",
                             "text-highlight-yellow"
                             ),
-                            "text-lg font-medium underline-offset-2 hover:text-highlight-yellow"
+                            "font-medium underline-offset-2 hover:text-highlight-yellow"
                         )
                         }
                     >

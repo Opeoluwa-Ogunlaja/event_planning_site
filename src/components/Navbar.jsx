@@ -26,7 +26,7 @@ const NavbarDropdown = () => {
   const id = useId();
   const [open, toggle, setOpen] = useToggle();
   const dropdownRef = useRef();
-  useClickOutside(dropdownRef, (e) => {
+  useClickOutside(dropdownRef, () => {
     setOpen(false);
   });
 

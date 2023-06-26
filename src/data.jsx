@@ -9,21 +9,27 @@ import testimonial_2 from "./assets/testimonial_2.jpg";
 import testimonial_3 from "./assets/testimonial_3.jpg";
 import { Icon_facebook, Icon_instagram, Icon_pinterest, Icon_twitter } from "./assets/icons/regular";
 
+const baseUrl = '/event_planning_site/';
+
+export const absolutePath  = (route) => {
+  return baseUrl + route
+}
+
 export const nav_links = [
   {
-    to: "/event_planning_site/",
+    to: absolutePath(''),
     label: "Home",
   },
   {
-    to: "/event_planning_site/services",
+    to: absolutePath('services'),
     label: "Services",
   },
   {
-    to: "/event_planning_site/gallery",
+    to: absolutePath('gallery'),
     label: "Gallery",
   },
   {
-    to: "/event_planning_site/contact-us",
+    to: absolutePath('contact-us'),
     label: "Contact us",
   },
 ];

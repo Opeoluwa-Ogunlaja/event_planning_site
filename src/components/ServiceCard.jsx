@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import { twMerge } from "tailwind-merge";
 import { Tilt } from "react-tilt";
 
-const ServiceCard = ({ title, img, className, index = 1 }) => {
+const ServiceCard = ({ title, img, className }) => {
   return (
     <Tilt>
       <div
