@@ -4,6 +4,8 @@ import { ReactComponent as Icon_twitter } from './icon-twitter.svg'
 import { ReactComponent as Icon_pinterest } from './icon-pinterest.svg'
 import { ReactComponent as Icon_instagram } from './icon-instagram.svg'
 import { ReactComponent as Icon_facebook } from './icon-facebook.svg'
+import { ReactComponent as EyeSlashIcon } from './arrow-right.svg'
+import { ReactComponent as EyeIcon} from './arrow-left.svg'
 
 
-export { arrow_left, arrow_right, Icon_twitter, Icon_facebook, Icon_pinterest, Icon_instagram }
+export { arrow_left, arrow_right, Icon_twitter, Icon_facebook, Icon_pinterest, Icon_instagram, EyeIcon, EyeSlashIcon }
