@@ -41,19 +41,21 @@ const header_buttons_arr = [
 export const Contact_Us_FormGroups_Elem = () => {
   const { tab, setTab } = useTab();
   return (
-    <div className="contact-column p-2">
-      <header className="tab_header grid px-10">
+    <div className="contact-column mt-10 w-full grid-cols-1 justify-start sm:mt-0 sm:grid-cols-none sm:justify-end">
+      <header className="tab_header grid w-full justify-evenly gap-2 sm:justify-stretch sm:gap-4">
         {header_buttons_arr.map((Item, i) => (
           <div
             key={Item.label + i}
-            className="grid h-full w-full place-items-center"
+            className="flex place-items-center sm:h-full sm:w-full"
           >
             <button
-              className={`p-4 flex flex-col items-center justify-center gap-3 rounded-md ${tab == i ? 'bg-white text-highlight-blue' : 'text-white'} transition-all hover:bg-white hover:text-highlight-blue`}
+              className={`flex w-full flex-col items-center justify-center gap-3 rounded-md p-4 ${
+                tab == i ? "bg-white text-highlight-blue" : "text-white"
+              } transition-all hover:bg-white hover:text-highlight-blue`}
               onClick={() => setTab(i)}
             >
-              <Item.Icon />
-              <span>{Item.label}</span>
+              <Item.Icon className="aspect-square w-6 sm:w-auto" />
+              <span className="hidden sm:inline-block">{Item.label}</span>
             </button>
           </div>
         ))}
