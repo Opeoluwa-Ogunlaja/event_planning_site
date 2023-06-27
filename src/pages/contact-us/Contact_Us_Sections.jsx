@@ -3,7 +3,7 @@
 // import ExpandableText from "../../components/ExpandableText"
 // import useMediaQuery from "../../hooks/useMediaQuery"
 
-import TabProvider, { useTab } from "../../../contexts/TabProvider";
+import { useTab } from "../../../contexts/TabProvider";
 import {
   Mail_Icon,
   Map_Pin_Icon,
@@ -13,9 +13,9 @@ import {
 export const Contact_Us_Header_Elem = () => {
   return (
     <div className="contact-column items-start justify-center">
-      <div className="space-y-3 text-center text-white sm:py-24 sm:text-start">
-        <h2 className="text-2xl font-bold sm:text-4xl">Get in Touch</h2>
-        <p className="mx-auto max-w-[30ch] text-base sm:mx-0 sm:max-w-max sm:text-lg">
+      <div className="space-y-1 sm:space-y-3 text-center text-white sm:py-12 lg:py-24 sm:text-center lg:text-start">
+        <h2 className="text-3xl font-bold sm:text-4xl">Get in Touch</h2>
+        <p className="mx-auto max-w-[30ch] text-base lg:mx-0 sm:max-w-max sm:text-lg tracking-wide sm:tracking-wider">
           Feel free to contact us for information on our services
         </p>
       </div>
@@ -41,7 +41,7 @@ const header_buttons_arr = [
 export const Contact_Us_FormGroups_Elem = () => {
   const { tab, setTab } = useTab();
   return (
-    <div className="contact-column mt-10 w-full grid-cols-1 justify-start sm:mt-0 sm:grid-cols-none sm:justify-end">
+    <div className="contact-column mt-6 w-full grid-cols-1 justify-start lg:mt-0 lg:grid-cols-none lg:justify-end">
       <header className="tab_header grid w-full justify-evenly gap-2 sm:justify-stretch sm:gap-4">
         {header_buttons_arr.map((Item, i) => (
           <div
@@ -55,7 +55,7 @@ export const Contact_Us_FormGroups_Elem = () => {
               onClick={() => setTab(i)}
             >
               <Item.Icon className="aspect-square w-6 sm:w-auto" />
-              <span className="hidden sm:inline-block">{Item.label}</span>
+              <span className="hidden lg:inline-block">{Item.label}</span>
             </button>
           </div>
         ))}

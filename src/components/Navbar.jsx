@@ -81,10 +81,10 @@ const NavbarDropdown = () => {
   );
 };
 
-const Navbar = () => {
+const Navbar = ({ className }) => {
   return (
     <nav
-      className={`space-between navbar absolute top-0 z-50 mt-3 flex w-full items-center sm:mt-8`}
+      className={twMerge(`space-between navbar absolute top-0 z-50 mt-3 flex w-full items-center sm:mt-8`, className)}
       style={{ paddingInline: "var(--side-padding)" }}
     >
       <div className="grid place-items-center">

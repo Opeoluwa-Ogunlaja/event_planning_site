@@ -4,8 +4,8 @@ const TabContext = createContext()
 
 export const useTab = () => useContext(TabContext)
 
-const TabProvider= ({ children }) => {
-    const [tab, setTab] = useState(0)
+const TabProvider= ({ children, defaultId = 0 }) => {
+    const [tab, setTab] = useState(defaultId)
 
     return <TabContext.Provider value={{ tab, setTab }}>
         {children}
