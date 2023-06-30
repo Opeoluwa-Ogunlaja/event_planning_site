@@ -7,17 +7,18 @@ import { twMerge } from "tailwind-merge";
 
 export const TextField = ({ field, className }) => {
   const meta = useField(field.name)[1];
+  const id = useId();
 
   return (
     <div className="form-control">
-      <label htmlFor={field.name} className="text-blue-400">
+      <label htmlFor={id} className="text-blue-400">
         {field.label}
       </label>
       <div className="form-field-container relative overflow-hidden  rounded-md before:bg-blue-600 dark:before:bg-slate-400">
         {field.icon}
         <Field
           name={field.name}
-          id={field.name}
+          id={id}
           type={field.type}
           placeholder={field?.placeholder}
           className={twMerge(
@@ -59,12 +60,13 @@ export const InputField = ({ field, className, type, value, handleChange }) => {
 export const TextAreaField = ({ field, className }) => {
   const [fieldData, meta] = useField(field.name);
   const { value } = meta;
+  const id = useId()
 
   const { onBlur, onChange } = fieldData;
 
   return (
     <div className="form-control">
-      <label htmlFor={field.name} className="text-blue-400">
+      <label htmlFor={id} className="text-blue-400">
         {field.label}
       </label>
       <div className="form-field-container relative overflow-hidden rounded-md before:bg-blue-600 dark:before:bg-slate-400">
@@ -75,6 +77,7 @@ export const TextAreaField = ({ field, className }) => {
           onChange={onChange}
           onBlur={onBlur}
           placeholder={field?.placeholder}
+          id={id}
           className={twMerge(
             `rounded-md border border-slate-200 bg-gray-50 px-4 py-2 text-base text-slate-700 shadow-inner placeholder:font-normal placeholder:text-slate-300 dark:bg-slate-500 dark:text-blue-100 dark:placeholder:text-blue-100`,
             className
@@ -94,6 +97,7 @@ export const PasswordField = ({ field, className = "" }) => {
   const [show, toggleShow, setShow] = useToggle();
   const inputRef = useRef();
   const meta = useField(field.name)[1];
+  const id = useId()
 
   const focusInput = () => {
     // const length = inputRef.current.value.length - 1
@@ -102,14 +106,14 @@ export const PasswordField = ({ field, className = "" }) => {
 
   return (
     <div className="form-control">
-      <label htmlFor={field.name} className="text-blue-400">
+      <label htmlFor={id} className="text-blue-400">
         {field.label}
       </label>
       <div className="form-field-container relative overflow-hidden  rounded-md before:bg-blue-600 dark:before:bg-slate-400">
         {field.icon}
         <Field
           name={field.name}
-          id={field.name}
+          id={id}
           innerRef={inputRef}
           placeholder={field?.placeholder}
           type={show ? "text" : "password"}

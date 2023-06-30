@@ -6,26 +6,27 @@
 
     grid-template-areas: 'one two';
 
-    @include md {
-        grid-auto-rows: max-content;
-        grid-template-areas: 
-            'one'
-            'two'
-        ;
-     }
+    @include md{
+        grid-auto-rows: max-content 1fr;
+        grid-auto-columns: 1fr;
 
-    &:first-child{
+        grid-template-areas: 'one' 'two';
+    }
+
+    & > :first-child{
         grid-area: one;
     }
 
-    &:last-child{
+    & > :last-child{
         grid-area: two;
     }
 
     .contact-column{
         display: grid;
-        grid-template-rows: subgrid;
-        grid-row: span 99;
+        
+        &:last-child{
+            grid-template-rows: max-content 1fr;
+        }
     }
 
     .tab_header{

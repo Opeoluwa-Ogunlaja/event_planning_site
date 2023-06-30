@@ -9,7 +9,7 @@ import testimonial_2 from "./assets/testimonial_2.jpg";
 import testimonial_3 from "./assets/testimonial_3.jpg";
 import { Icon_facebook, Icon_instagram, Icon_pinterest, Icon_twitter } from "./assets/icons/regular";
 
-const baseUrl = '/event_planning_site/';
+export const baseUrl = '/event_planning_site/';
 
 export const absolutePath  = (route) => {
   return baseUrl + route
