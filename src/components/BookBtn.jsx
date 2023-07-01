@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
-import { baseUrl } from "../data";
+import { absolutePath } from "../data";
 
 const BookBtn = ({ className, onClick }) => {
   const navigate = useNavigate();
@@ -10,7 +10,7 @@ const BookBtn = ({ className, onClick }) => {
       return;
     }
 
-    navigate(baseUrl + "book");
+    navigate(absolutePath("book"));
   };
 
   return (

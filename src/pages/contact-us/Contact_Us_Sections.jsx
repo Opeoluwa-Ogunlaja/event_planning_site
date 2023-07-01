@@ -42,8 +42,8 @@ const header_buttons_arr = [
 
 const ContactInfo = () => {
   return (
-    <div className="h-full w-full rounded-md bg-white px-8 py-4 sm:mx-auto sm:w-11/12">
-      <h3 className="text-xl font-bold text-normal">Contact Information</h3>
+    <div className="h-full w-full rounded-md bg-white px-5 py-4 sm:mx-auto sm:w-11/12">
+      <h3 className="text-lg font-bold text-dark">Contact Information</h3>
       <ul className="flex flex-col gap-4">
         <li></li>
         <li></li>
@@ -62,8 +62,8 @@ const ContactForm = () => {
             onSubmit={handleSubmit}
             className="h-full w-full rounded-md bg-white sm:mx-auto sm:w-11/12"
           >
-            <div className="container px-8 py-4">
-              <h3 className="text-xl font-bold text-normal">Contact us</h3>
+            <div className="container px-5 py-4">
+              <h3 className="text-lg font-bold text-dark">Contact us</h3>
             </div>
           </form>
         );

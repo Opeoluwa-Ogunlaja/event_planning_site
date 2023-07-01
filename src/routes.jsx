@@ -3,11 +3,17 @@ import Home from "./pages/home/Home";
 import Services from "./pages/services/Services";
 import Contact_Us from "./pages/contact-us/Contact_Us";
 import Gallery from "./pages/gallery/Gallery";
+import Book from "./pages/book/Book";
+import { baseUrl } from "./data";
 
 const Router = createBrowserRouter([
     {
-        path: '/event_planning_site/',
+        path: baseUrl,
         children: [
+            {
+                path: 'book',
+                element: <Book />
+            },
             {
                 path: 'services',
                 element: <Services />
