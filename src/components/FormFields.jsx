@@ -11,10 +11,10 @@ export const TextField = ({ field, className }) => {
 
   return (
     <div className="form-control">
-      <label htmlFor={id} className="text-blue-400">
+      <label htmlFor={id} className="text-highlight-blue">
         {field.label}
       </label>
-      <div className="form-field-container relative overflow-hidden  rounded-md before:bg-blue-600 dark:before:bg-slate-400">
+      <div className="form-field-container relative overflow-hidden  rounded-md before:bg-primary">
         {field.icon}
         <Field
           name={field.name}
@@ -22,7 +22,7 @@ export const TextField = ({ field, className }) => {
           type={field.type}
           placeholder={field?.placeholder}
           className={twMerge(
-            `rounded-md border border-slate-200 bg-gray-50 py-2 pl-14 pr-2 text-base text-slate-700 shadow-inner placeholder:font-normal placeholder:text-slate-300 dark:bg-slate-500 dark:text-blue-100 dark:placeholder:text-blue-50`,
+            `rounded-md border border-slate-200 bg-gray-50 py-2 ${ field.icon ?  'pl-14' : 'pl-4'} pr-2 text-base text-dark shadow-inner placeholder:font-normal placeholder:text-light`,
             className
           )}
         />
@@ -39,7 +39,7 @@ export const TextField = ({ field, className }) => {
 export const InputField = ({ field, className, type, value, handleChange }) => {
   return (
     <div className="form-control">
-      <div className="form-field-container relative overflow-hidden  rounded-md before:bg-blue-600 dark:before:bg-slate-400">
+      <div className="form-field-container relative overflow-hidden  rounded-md before:bg-primary">
         {field.icon}
         <input
           name={field.name}
@@ -48,7 +48,7 @@ export const InputField = ({ field, className, type, value, handleChange }) => {
           value={value}
           placeholder={field?.placeholder}
           className={twMerge(
-            `rounded-md border border-slate-200 bg-gray-50 py-2 pl-14 pr-2 text-base text-slate-700 shadow-inner placeholder:font-normal placeholder:text-slate-300 dark:bg-slate-500 dark:text-blue-100 dark:placeholder:text-blue-100`,
+            `rounded-md border border-slate-200 bg-gray-50 py-2 ${ field.icon ?  'pl-14' : 'pl-4'} pr-2 text-base text-dark shadow-inner placeholder:font-normal placeholder:text-light`,
             className
           )}
         />
@@ -66,10 +66,10 @@ export const TextAreaField = ({ field, className }) => {
 
   return (
     <div className="form-control">
-      <label htmlFor={id} className="text-blue-400">
+      <label htmlFor={id} className="text-highlight-blue">
         {field.label}
       </label>
-      <div className="form-field-container relative overflow-hidden rounded-md before:bg-blue-600 dark:before:bg-slate-400">
+      <div className="form-field-container relative overflow-hidden rounded-md before:bg-primary">
         <textarea
           name={field.name}
           type={field.type}
@@ -79,7 +79,7 @@ export const TextAreaField = ({ field, className }) => {
           placeholder={field?.placeholder}
           id={id}
           className={twMerge(
-            `rounded-md border border-slate-200 bg-gray-50 px-4 py-2 text-base text-slate-700 shadow-inner placeholder:font-normal placeholder:text-slate-300 dark:bg-slate-500 dark:text-blue-100 dark:placeholder:text-blue-100`,
+            `rounded-md border border-slate-200 bg-gray-50 px-4 py-2 text-base text-normal shadow-inner placeholder:font-normal placeholder:text-light`,
             className
           )}
         />
@@ -106,10 +106,10 @@ export const PasswordField = ({ field, className = "" }) => {
 
   return (
     <div className="form-control">
-      <label htmlFor={id} className="text-blue-400">
+      <label htmlFor={id} className="text-highlight-blue">
         {field.label}
       </label>
-      <div className="form-field-container relative overflow-hidden  rounded-md before:bg-blue-600 dark:before:bg-slate-400">
+      <div className="form-field-container relative overflow-hidden  rounded-md before:bg-primary">
         {field.icon}
         <Field
           name={field.name}
@@ -118,7 +118,7 @@ export const PasswordField = ({ field, className = "" }) => {
           placeholder={field?.placeholder}
           type={show ? "text" : "password"}
           className={twMerge(
-            `rounded-md border border-slate-200 bg-gray-50 px-4 py-2 text-base text-slate-700 shadow-inner placeholder:font-normal placeholder:text-slate-300 dark:bg-slate-500 dark:text-blue-100 dark:placeholder:text-blue-100`,
+            `rounded-md border border-slate-200 bg-gray-50 px-4 py-2 text-base text-dark shadow-inner placeholder:font-normal placeholder:text-light`,
             className
           )}
         />
@@ -126,7 +126,7 @@ export const PasswordField = ({ field, className = "" }) => {
         <EyeIcon
           className={`field-icon ${
             show ? "hide-toggle" : "show-toggle"
-          } -right-1 top-0 -mb-1 text-indigo-500 dark:text-blue-100`}
+          } -right-1 top-0 -mb-1 text-highlight-blue`}
           onClick={() => {
             setShow(true);
             focusInput();
@@ -135,7 +135,7 @@ export const PasswordField = ({ field, className = "" }) => {
         <EyeSlashIcon
           className={`field-icon ${
             show ? "show-toggle" : "hide-toggle"
-          } -right-1 top-0 -mb-1 text-indigo-500 dark:text-blue-100`}
+          } -right-1 top-0 -mb-1 text-highlight-blue`}
           onClick={() => {
             setShow(false);
             focusInput();

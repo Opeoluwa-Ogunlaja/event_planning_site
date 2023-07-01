@@ -18,24 +18,20 @@ const BookingForm = () => {
     <Formik
       validationSchema={bookingFormSchema}
       initialValues={{
-        firstName: "",
-        lastName: "",
+        fullName: "",
         email: "",
       }}
-      onSubmit={(values, actions) => {
-
-      }}
+      onSubmit={(values, actions) => {}}
     >
       {({ handleSubmit, isSubmitting }) => {
         return (
           <form onSubmit={handleSubmit} className="mt-8 grid grid-cols-1 gap-3">
             <TextField
               field={{
-                icon: <></>,
-                placeholder: "Enter your first name...",
+                placeholder: "Enter your full name... (First name first please)",
                 type: "text",
-                name: "firstName",
-                label: "First name",
+                name: "fullName",
+                label: "Full name",
               }}
               key={"firstName"}
               className={fieldClasses}
@@ -43,19 +39,6 @@ const BookingForm = () => {
 
             <TextField
               field={{
-                icon: <></>,
-                placeholder: "Enter your last name...",
-                type: "text",
-                name: "lastName",
-                label: "Last name",
-              }}
-              key={"lastName"}
-              className={fieldClasses}
-            />
-
-            <TextField
-              field={{
-                icon: <></>,
                 placeholder: "Enter your email...",
                 type: "text",
                 name: "email",
@@ -67,7 +50,7 @@ const BookingForm = () => {
 
             <button
               type="submit"
-              className="mt-4 w-full rounded-md bg-primary py-3 text-xl font-bold text-white hover:bg-opacity-70 transition-all"
+              className="mt-4 w-full rounded-md bg-primary py-3 text-xl font-bold text-white transition-all hover:bg-opacity-70"
             >
               Book Now
             </button>
@@ -81,7 +64,7 @@ const BookingForm = () => {
 const Book = () => {
   return (
     <div
-      className="section-container relative grid min-h-[100dvh] grid-cols-1 grid-rows-1 bg-primary-blue-grad"
+      className="relative grid min-h-[100dvh] grid-cols-1 grid-rows-1 bg-primary-blue-grad px-2"
       style={{
         placeItems: "center",
         placeContent: "center",
@@ -99,8 +82,10 @@ const Book = () => {
             </Link>
           </div>
           <div className="space-y-1">
-            <h2 className=" text-2xl font-bold text-normal">Booking Form</h2>
-            <p className="max-w-[45ch] text-light">
+            <h2 className=" text-2xl font-bold text-highlight-yellow drop-shadow-sm">
+              Booking Form
+            </h2>
+            <p className="max-w-[45ch] text-sm text-light">
               Fill this form in order to get started. This form is required for
               mutual trust between us.
             </p>
